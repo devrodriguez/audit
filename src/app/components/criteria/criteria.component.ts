@@ -8,16 +8,13 @@ import { CriteriaService } from '../../services/criteria.service';
   styleUrls: ['./criteria.component.css']
 })
 export class CriteriaComponent implements OnInit {
-  private criterias: any;
+  
+  public criterias: any;
 
-  constructor(private criteriaService: CriteriaService) { 
-    this.criteriaService.getCriterias().subscribe(criterias => {
-      console.log(criterias)
-      this.criterias = criterias;
-    });
-  }
+  constructor(private criteriaService: CriteriaService) {  }
 
   ngOnInit() {
+    
   }
 
 }

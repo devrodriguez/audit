@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSave } from '@fortawesome/free-solid-svg-icons';
 import { AuditorService } from '../../services/auditor.service';
 
 @Component({
@@ -8,16 +9,13 @@ import { AuditorService } from '../../services/auditor.service';
 })
 export class AuditorComponent implements OnInit {
 
-  private auditors: any;
+  public auditors: any;
+  public faSave;
 
-  constructor(private auditorService: AuditorService) { 
-    this.auditorService.getAuditors().subscribe(auditors => {
-      console.log(auditors)
-      this.auditors = auditors;
-    });
-  }
+  constructor(private auditorService: AuditorService) { }
 
   ngOnInit() {
+    this.faSave = faSave;
   }
 
 }

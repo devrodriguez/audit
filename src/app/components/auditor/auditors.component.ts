@@ -14,7 +14,6 @@ export class AuditorsComponent implements OnInit {
 
   ngOnInit() {
     this.auditorService.getAuditors().subscribe(auditors => {
-      console.log(auditors)
       this.auditors = auditors;
     });
   }

@@ -7,7 +7,7 @@ import { AuditorComponent } from './components/auditor/auditor.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'auditor', component: AuditorComponent },
+    { path: 'auditor/:id', component: AuditorComponent },
     { path: 'auditors', component: AuditorsComponent },
     { path: 'criteria', component: CriteriaComponent },
     { path: 'criterias', component: CriteriasComponent },

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { NgForm } from '@angular/forms';
+import { faSave, faBackward } from '@fortawesome/free-solid-svg-icons';
 import { AuditorService } from '../../services/auditor.service';
+import { Auditor } from '../../interfaces/auditor';
+
 
 @Component({
   selector: 'app-auditor',
@@ -8,14 +11,29 @@ import { AuditorService } from '../../services/auditor.service';
   styleUrls: ['./auditor.component.css']
 })
 export class AuditorComponent implements OnInit {
+  
+  public auditor: Auditor = {
+    name: '',
+    lastName: '',
+    email: ''
+  };
 
-  public auditors: any;
   public faSave;
+  public faBackward;
+
 
   constructor(private auditorService: AuditorService) { }
 
   ngOnInit() {
     this.faSave = faSave;
+    this.faBackward = faBackward;
+  }
+
+  public save() {
+    this.auditorService.createAuditor(this.auditor)
+    .subscribe(res => {
+      console.log(res);
+    });
   }
 
 }

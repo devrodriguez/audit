@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { faSave, faBackward } from '@fortawesome/free-solid-svg-icons';
 import { AuditorService } from '../../services/auditor.service';
 import { Auditor } from '../../interfaces/auditor';
+import { RoleService } from '../../services/role.service';
 
 
 @Component({
@@ -18,18 +19,25 @@ export class AuditorComponent implements OnInit {
     email: ''
   };
 
+  public roles: any;
+  public roleChoice: number = 1;
+
   public faSave;
   public faBackward;
 
-
-  constructor(private auditorService: AuditorService) { }
+  constructor(private auditorService: AuditorService, private serviceRoles: RoleService) { }
 
   ngOnInit() {
     this.faSave = faSave;
     this.faBackward = faBackward;
+
+    this.serviceRoles.getRoles().subscribe(roles => {
+      this.roles = roles;
+    });
   }
 
   public save() {
+    this.auditor['role_id'] = this.roleChoice;
     this.auditorService.createAuditor(this.auditor)
     .subscribe(res => {
       console.log(res);

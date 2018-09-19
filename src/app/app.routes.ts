@@ -9,7 +9,7 @@ const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'auditor/:id', component: AuditorComponent },
     { path: 'auditors', component: AuditorsComponent },
-    { path: 'criteria', component: CriteriaComponent },
+    { path: 'criteria/:id', component: CriteriaComponent },
     { path: 'criterias', component: CriteriasComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

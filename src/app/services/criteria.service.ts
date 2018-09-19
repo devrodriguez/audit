@@ -12,4 +12,12 @@ export class CriteriaService {
   getCriterias() {
     return this.http.get('http://localhost:8000/api/criterias')
   }
+
+  getSpecific(id: String) {
+    return this.http.get(`http://localhost:8000/api/criterias/${id}`);
+  }
+
+  createCriteria(criteria: any) {
+    return this.http.post('http://localhost:8000/api/criterias', criteria);
+  }
 }

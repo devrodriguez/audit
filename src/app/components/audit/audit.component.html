@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Auditor</th>
+            <th scope="col">Enterprise</th>
+            <th scope="col">Enterprise Address</th>
+            <th scope="col">Enterprise Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let audit of audits">
+            <td>{{ audit.description }}</td>
+            <td>{{ audit.created_at }}</td>
+            <td>{{ audit.name }}</td>
+            <td>{{ audit.name }}</td>
+            <td>{{ audit.address }}</td>
+            <td>{{ audit.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

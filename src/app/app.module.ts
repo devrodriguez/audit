@@ -9,6 +9,9 @@ import { HttpModule } from '@angular/http';
 import { APP_ROUTING } from './app.routes';
 
 import { AppComponent } from './app.component';
+
+// App Components
+import { AuditComponent } from './components/audit/audit.component';
 import { AuditorComponent } from './components/auditor/auditor.component';
 import { AuditorsComponent } from './components/auditor/auditors.component';
 import { CriteriaComponent } from './components/criteria/criteria.component';
@@ -22,12 +25,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
+    AuditComponent,
     AuditorComponent,
     AuditorsComponent,
     CriteriaComponent,
     CriteriasComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     HttpClientModule,

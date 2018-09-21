@@ -9,7 +9,7 @@ export class AuditorService {
   constructor(private http: HttpClient) {  }
 
   getAuditors() {
-    return this.http.get('http://localhost:8000/api/auditors_full');
+    return this.http.get('http://localhost:8000/api/auditors/all');
   }
 
   createAuditor(auditor) {

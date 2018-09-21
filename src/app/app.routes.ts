@@ -4,7 +4,7 @@ import { CriteriasComponent } from './components/criteria/criterias.component';
 import { HomeComponent } from './components/home/home.component';
 import { CriteriaComponent } from './components/criteria/criteria.component';
 import { AuditorComponent } from './components/auditor/auditor.component';
-import { AuditComponent } from './audit/audit/audit.component';
+import { AuditComponent } from './components/audit/audit.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },

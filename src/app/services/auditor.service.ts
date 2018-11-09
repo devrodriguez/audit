@@ -19,4 +19,12 @@ export class AuditorService {
 
     return this.http.post('http://localhost:8000/api/auditors', auditor);
   }
+
+  getSpecific(id: String) {
+    return this.http.get(`http://localhost:8000/api/auditors/${id}`);
+  }
+
+  updateAuditor(auditor: any) {
+    return this.http.put(`http://localhost:8000/api/auditors/${auditor.id}`, auditor);
+  }
 }

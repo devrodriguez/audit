@@ -3,7 +3,7 @@
     <div class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let criteria of criterias">
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">{{ criteria.title }}</h5>
-        <a class="btn btn-outline-primary btn-sm" [routerLink]="['/criteria', criteria.id]">Edit</a>
+        <a class="btn btn-outline-primary btn-sm" [routerLink]="['/criteria', criteria.id, { 'criteria' : criteria }]">Edit</a>
       </div>
       <p class="mb-1">{{ criteria.description }}</p>
       <small>Last update {{ criteria.updated_at | date }}</small>

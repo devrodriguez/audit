@@ -36,9 +36,18 @@ export class CriteriaComponent implements OnInit {
   }
 
   save() {
-    this.criteriaService.createCriteria(this.criteria).subscribe(res => {
-      console.log(res);
-    });
+    if(this.criteria.id != null) {
+      this.criteriaService.updateCriteria(this.criteria).subscribe(res => {
+        this.router.navigate(['/criterias'])
+      });
+    }
+    else
+    {
+      this.criteriaService.createCriteria(this.criteria).subscribe(res => {
+        this.router.navigate(['/criterias'])
+      });
+    }
+    
   }
 
 }

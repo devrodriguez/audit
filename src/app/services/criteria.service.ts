@@ -20,4 +20,8 @@ export class CriteriaService {
   createCriteria(criteria: any) {
     return this.http.post('http://localhost:8000/api/criterias', criteria);
   }
+
+  updateCriteria(criteria: any) {
+    return this.http.put(`http://localhost:8000/api/criterias/${criteria.id}`, criteria);
+  }
 }

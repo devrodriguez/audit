@@ -18,4 +18,6 @@ export class CriteriasComponent implements OnInit {
     });
   }
 
+  
+
 }

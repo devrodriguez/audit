@@ -5,6 +5,8 @@ import { HomeComponent } from './components/home/home.component';
 import { CriteriaComponent } from './components/criteria/criteria.component';
 import { AuditorComponent } from './components/auditor/auditor.component';
 import { AuditComponent } from './components/audit/audit.component';
+import { EnterpriseComponent } from './components/enterprises/enterprise.component';
+import { EnterprisesComponent } from './components/enterprises/enterprises.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
@@ -13,6 +15,8 @@ const APP_ROUTES: Routes = [
     { path: 'auditors', component: AuditorsComponent },
     { path: 'criteria/:id', component: CriteriaComponent },
     { path: 'criterias', component: CriteriasComponent },
+    { path: 'enterprise/:id', component: EnterpriseComponent },
+    { path: 'enterprises', component: EnterprisesComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

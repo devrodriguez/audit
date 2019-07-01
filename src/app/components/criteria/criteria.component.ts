@@ -22,7 +22,9 @@ export class CriteriaComponent implements OnInit {
   public faSave;
   public faBackward;
 
-  constructor(private criteriaService: CriteriaService, private router: Router, private route: ActivatedRoute) { 
+  constructor(private criteriaService: CriteriaService, 
+              private router: Router, 
+              private route: ActivatedRoute) { 
     this.route.params.subscribe(params => this.id = params['id']);
   }
 

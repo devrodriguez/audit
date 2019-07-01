@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let enterprise of enterprises">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Nit. {{ enterprise.nit }}</h5>
+        <a class="btn btn-outline-primary btn-sm" [routerLink]="['/enterprise', enterprise.id, { 'enterprise' : enterprise }]">Edit</a>
+      </div>
+      <p class="mb-1">{{ enterprise.name }}</p>
+      <small>Last update {{ enterprise.updated_at | date }}</small>
+    </div>
+  </div>
+</div>

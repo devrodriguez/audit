@@ -16,6 +16,8 @@ import { AuditorComponent } from './components/auditor/auditor.component';
 import { AuditorsComponent } from './components/auditor/auditors.component';
 import { CriteriaComponent } from './components/criteria/criteria.component';
 import { CriteriasComponent } from './components/criteria/criterias.component';
+import { EnterprisesComponent } from './components/enterprises/enterprises.component';
+import { EnterpriseComponent } from './components/enterprises/enterprise.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -32,6 +34,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CriteriasComponent,
     NavbarComponent,
     HomeComponent,
+    EnterprisesComponent,
+    EnterpriseComponent,
   ],
   imports: [
     HttpClientModule,
